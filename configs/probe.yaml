@@ -1,0 +1,33 @@
+# Linear-probing parameters (§6)
+pca_dim: 256                # PCA components before logistic regression
+test_ratio: 0.2             # pattern-level train/test split
+seed: 42
+
+# Layer range to probe (0-indexed, inclusive)
+layer_start: 0
+layer_end: 31               # adjust to model depth
+
+# Probe types to run
+probe_types:
+  - time                    # pairwise chronological ordering
+  - entity_id_local         # character recurrence (first-appear vs. recurring)
+  - common_element          # shared-field multi-class decode
+
+# Conditions per probe (cross-condition evaluation)
+time_conditions:
+  - baseline
+  - w_o_time_series
+entity_id_conditions:
+  - baseline
+  - w_o_agency
+common_element_conditions:
+  - baseline
+  - w_o_causality
+
+# Cross-condition transfer (train on baseline → test on w/o time-series)
+time_cross_conditions:
+  train: baseline
+  test: w_o_time_series
+
+# Statistical threshold
+alpha: 0.05

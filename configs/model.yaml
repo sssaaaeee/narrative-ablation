@@ -1,0 +1,23 @@
+# Inference model settings (§5 behavioral / §6 probing / §7 mechanistic)
+hf_model: "meta-llama/Meta-Llama-3.1-8B-Instruct"
+
+# Quantization
+load_in_4bit: true          # BitsAndBytesConfig 4-bit NF4
+bnb_4bit_compute_dtype: "bfloat16"
+
+# Generation (behavioral)
+max_new_tokens: 32
+do_sample: false            # greedy decoding
+
+# Judge model (§5)
+judge_model: "gpt-3.5-turbo"
+
+# Device
+device: "auto"
+
+# Supported model IDs (reference)
+# - meta-llama/Meta-Llama-3.1-8B-Instruct
+# - meta-llama/Meta-Llama-3.1-70B-Instruct
+# - Qwen/Qwen2.5-7B-Instruct
+# - Qwen/Qwen2.5-14B-Instruct
+# - Qwen/Qwen2.5-72B-Instruct

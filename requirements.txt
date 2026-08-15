@@ -1,0 +1,31 @@
+# Core ML / NLP
+torch>=2.1.0
+transformers>=4.43.0
+accelerate>=0.29.0
+bitsandbytes>=0.43.0
+sentencepiece>=0.2.0
+tokenizers>=0.19.0
+
+# API clients
+openai>=1.30.0
+python-dotenv>=1.0.0
+
+# Linear probing / statistics
+scikit-learn>=1.4.0
+scipy>=1.12.0
+statsmodels>=0.14.0
+numpy>=1.26.0
+
+# NLP utilities (manipulation check)
+spacy>=3.7.0
+# Run after install: python -m spacy download en_core_web_sm
+
+# Progress / utilities
+tqdm>=4.66.0
+
+# Visualisation (figures only – not needed for core pipeline)
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# FAISS (optional – retrieval-head detection only)
+# faiss-cpu>=1.8.0

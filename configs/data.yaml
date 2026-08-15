@@ -1,0 +1,22 @@
+# Data-construction parameters (§3)
+seed: 42
+num_patterns: 300          # number of story patterns
+num_sets_per_pattern: 10   # events per pattern
+
+# Narrative-generation API
+generation_model: "openai/gpt-3.5-turbo"   # OpenRouter model string
+generation_temperature: 0.8
+generation_max_tokens: 220
+
+# Element pool sizes (informational; actual pools live in data/pools/)
+pool_temporal_size: 131
+pool_location_size: 151
+pool_entity_size: 122
+pool_content_size: 128
+
+# Conditions generated
+conditions:
+  - baseline
+  - w_o_causality
+  - w_o_time_series
+  - w_o_agency

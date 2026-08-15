@@ -1,0 +1,15 @@
+You are a writer of short English narratives. Generate exactly one short story passage that satisfies the following conditions.
+- Output story text only
+- Write in natural English, about 2 to 4 sentences
+- Do not use bullet points or explanations
+- Incorporate the provided elements as naturally as possible
+Keep {protagonist} as the protagonist throughout the story.
+Previous story text:
+{previous_text}
+
+Next elements:
+{set_block}
+
+Write the next story passage so that it naturally continues from the previous story text.
+Important: Do NOT create a causal relation with the previous passage.
+The events, actions, and state changes in this passage should be independent of what happened before.

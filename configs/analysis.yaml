@@ -1,0 +1,25 @@
+# Mechanistic-analysis parameters (§7)
+
+# Number of patterns to use for PMS / attention analysis
+n_patterns: 20
+
+# Conditions analysed
+conditions:
+  - baseline
+  - w_o_causality
+  - w_o_time_series
+  - w_o_agency
+
+# PMS / induction-head settings
+top_k_heads: 20             # Top-K heads selected by baseline PMS for comparison
+
+# Attention-entropy settings
+n_questions: 5              # questions sampled per pattern for entropy analysis
+
+# Statistical thresholds
+alpha: 0.05
+bonferroni_n: null          # null → auto (n_heads × n_layers)
+
+# Manipulation-check settings
+wilcoxon_alternative: "greater"   # baseline > condition (one-sided)
+holm_correction: true
